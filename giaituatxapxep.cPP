@@ -17,7 +17,7 @@ void SelectionSort(int a[], int n)
     }
 }
 
-void inserttionsort(int a[],int n)
+void InsertionSort(int a[],int n)
 {
     for(int i=1;i<n;i++)
     {
@@ -25,24 +25,45 @@ void inserttionsort(int a[],int n)
         int j=i-1;
       while (j>=0 && a[j]>x)
       {
-        a[j+1];
+        a[j+1]=a[j];
         j--;
 
       }
-a[i+1]=x;
+a[j+1]=x;
     }
+}
+
+void bublesort(int a[], int n)
+{
+    for(int i=0;i<n-1;i++)
+{
+    for (int j=i=1;j<n-i-1;j++)
+    {
+        if(a[j]<a[j+1])
+        {
+            swap(a[j],a[j+1]);
+        }
+    }
+}
 }
 int main()
 {
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int arr1[] = {64, 25, 12, 22, 11};
+    int arr2[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr1) / sizeof(arr1[0]);
 
-    SelectionSort(arr, n);
-    
-inserttionsort(arr,n);
-    cout << "Sorted array: ";
+    // Test Selection Sort
+    SelectionSort(arr1, n);
+    cout << "SelectionSort result: ";
     for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
+        cout << arr1[i] << " ";
+    cout << endl;
+
+    // Test Insertion Sort
+    InsertionSort(arr2, n);
+    cout << "InsertionSort result: ";
+    for (int i = 0; i < n; i++)
+        cout << arr2[i] << " ";
     cout << endl;
 
     return 0;
