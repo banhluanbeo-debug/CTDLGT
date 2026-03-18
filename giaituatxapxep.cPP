@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     #include <iostream>
     using namespace std;
 
@@ -5,6 +6,18 @@
     void SelectionSort(int a[], int n)
     {
         for (int i = 0; i < n - 1; i++)
+=======
+#include <iostream>
+using namespace std;
+//// hhh
+void SelectionSort(int a[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int min = i;
+        for (int j = i + 1; j < n; j++)
+
+>>>>>>> 17ff999cdc4607143e6a23844e776b60f999e07c
         {
             int min = i;
             for (int j = i + 1; j < n; j++)
